@@ -92,3 +92,20 @@ Teleport = function(spawnCoords)
     end
     return
 end
+
+---Create Blips
+Citizen.CreateThread(function()
+	for k,v in pairs(Config.SubwayLocations) do
+		for i = 1, #v.Coords, 1 do
+			local blip = AddBlipForCoord(v.Coords[i])
+			SetBlipSprite (blip, 513)
+			SetBlipDisplay(blip, 2)
+			SetBlipScale  (blip, 1.0)
+			SetBlipColour (blip, 39)
+			SetBlipAsShortRange(blip, true)
+			BeginTextCommandSetBlipName("STRING")
+			AddTextComponentString(k)
+			EndTextCommandSetBlipName(blip)
+		end
+	end
+end)
