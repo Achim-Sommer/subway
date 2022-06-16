@@ -9,14 +9,14 @@ Config.Stations = {
 		stationNumber = 1,
 		name = "LSIA Terminal",
 		price = 5,
-		ticketBuy = vec(-1012.76, -2755.96, -0.8),
+		ticketBuy = vector3(-1012.76, -2755.96, -0.1),
 		exitMetro = vec(-1067.48, -2697.0, -7.4),
 	},
 	{
 		stationNumber = 2,
 		name = "LSIA Parking",
 		price = 5,
-		ticketBuy = vec(-908.96, -2351.32, -2.52),
+		ticketBuy = vector3(-908.96, -2351.32, -4.52),
 		exitMetro = vec(-891.84, -2342.32, -11.72),
 	},
 	{

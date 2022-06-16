@@ -5,21 +5,22 @@ Citizen.CreateThread(function()
         TriggerEvent('esx:getSharedObject', function(obj)
             ESX = obj
         end)
-        Citizen.Wait(1)
+        Citizen.Wait(0)
     end
 end) 
 
 Citizen.CreateThread(function()
     while true do
-        local playerPed = PlayerPedId()
+        Citizen.Wait(0)
         local currentStation = nil
+        local playerCoords = GetEntityCoords(PlayerPedId())
         for k, v in pairs(Config.Stations) do
-            local playerCoords = GetEntityCoords(playerPed)
-            local distance = #(playerCoords - v.ticketBuy)
-            if distance < 12.0 and not IsPedInAnyVehicle(playerPed, false) then
-	            DrawMarker(1, v.ticketBuy, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.MarkerSize, Config.RGB[1], Config.RGB[2], Config.RGB[3], 100, false, true, 2, false, false, false, false)
-                currentStation = v.stationNumber
-            end
+                local distance = #(playerCoords - v.ticketBuy)
+
+                 if distance < 12.0 and not IsPedInAnyVehicle(PlayerPedId(), false)then
+	                DrawMarker(1, v.ticketBuy, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.MarkerSize, Config.RGB[1], Config.RGB[2], Config.RGB[3], 100, false, true, 2, false, false, false, false)
+                    currentStation = v.stationNumber
+                end
             if distance < 1.5 and not opened then
                 SetTextComponentFormat('STRING')
 			    AddTextComponentString("Drücke ~INPUT_CONTEXT~ um ein ~y~U-Bahn Ticket~s~ zu kaufen")

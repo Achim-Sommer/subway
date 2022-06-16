@@ -4,7 +4,7 @@ var currentLabel = ''
 var stationsItems;
 var currentStation;
 var intv = null;
-var curTest = 30;
+var curTest = 10;
 
 function switchStation(stNumber, stPrice, stName) {
 	currentNumber = stNumber
@@ -29,9 +29,9 @@ $(document).ready(function() {
 							<div class="oneLine">
 								<p class="stationBtnPrice">`
 					if (value.stationNumber == currentStation) {
-						myElement = myElement + `<p class="priceBtn" style="margin-top: 5px;"><i class="fas fa-map-marker-alt"></i> Your current station</p>`
+						myElement = myElement + `<p class="priceBtn" style="margin-top: 5px;"><i class="fas fa-map-marker-alt"></i> Aktuelle Station</p>`
 					} else {
-						myElement = myElement + `Price: <p class="priceBtn">$${value.price}</p>`
+						myElement = myElement + `Preis: <p class="priceBtn">$${value.price}</p>`
 					}
 					myElement = myElement + `
 								</div>
@@ -40,14 +40,14 @@ $(document).ready(function() {
 					</div>`
 				$(".stationButtons").append(myElement)
 			}
-			$("#currentStation").html(`No Stop Selected`)
+			$("#currentStation").html(`Keine Haltestelle ausgewählt`)
 			$("#currentPrice").html(`$0`)
 		} else if (event.data.action == "enter") {
 			$(".timerPanel").fadeIn();
 			if(intv) { clearInterval(intv);  }
            		intv = setInterval(() => {
            		    curTest = curTest - 1;
-           		    $("#timer").html(`${curTest} seconds remaining...`);
+           		    $("#timer").html(`${curTest} Sekunden verbleibend...`);
            		}, 1000);
 		} else if (event.data.action == "exit") {
 			$(".timerPanel").fadeOut();
