@@ -4,6 +4,8 @@ Config.MarkerSize = vec(0.95, 0.95, 0.45)
 Config.RGB = {209, 142, 17}
 Config.SubwayTimer = 10
 
+Config.subwayBlip = {Sprite = 513, Color = 39, Display = 2, Scale = 1.0, Title = "U-Bahn"}
+
 Config.Stations = {
 	{
 		stationNumber = 1,
