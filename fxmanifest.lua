@@ -3,9 +3,10 @@ game 'gta5'
 lua54 'yes'
 
 ui_page 'ui/ui.html'
+
 files {
     'ui/*.*', 
-    'ui/**/*.*'
+    'ui/**/*.*',
 }
 
 shared_scripts {
@@ -20,11 +21,6 @@ server_scripts {
     'server/*.lua'
 }
 
-escrow_ignore {
-    'client/*.lua',
-    'server/*.lua',
-    'config.lua'
-}
 
 
 
@@ -193,5 +189,3 @@ escrow_ignore {
 
 
 
-
---https://github.com/JustMeGaming/vms_subway

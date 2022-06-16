@@ -52,7 +52,7 @@ $(document).ready(function() {
 		} else if (event.data.action == "exit") {
 			$(".timerPanel").fadeOut();
 			clearInterval(intv)
-			$.post('https://subway/action', JSON.stringify({action: "close"}));
+			$.post('https://esx_subway/action', JSON.stringify({action: "close"}));
 		}
 	});
 
@@ -60,7 +60,7 @@ $(document).ready(function() {
 		if (data.which == 27) {
 			$(".metroPanel").fadeOut();
 			$(".stationButtons").empty();
-			$.post('https://subway/action', JSON.stringify({action: "close"}));
+			$.post('https://esx_subway/action', JSON.stringify({action: "close"}));
 		}
 	};
 
@@ -68,7 +68,7 @@ $(document).ready(function() {
 		if (currentNumber != currentStation) {
 			$(".metroPanel").fadeOut();
 			$(".stationButtons").empty();
-			$.post('https://subway/action', JSON.stringify({action: "transport", station: currentNumber}));
+			$.post('https://esx_subway/action', JSON.stringify({action: "transport", station: currentNumber}));
 		}
 	});
 });

@@ -44,7 +44,7 @@ RegisterNUICallback("action", function(data, cb)
         if data.station ~= currentStation then
             for k, v in pairs(Config.Stations) do
                 if v.stationNumber == data.station then
-                    ESX.TriggerServerCallback("subway:getMoney", function(get)
+                    ESX.TriggerServerCallback("esx_subway:getMoney", function(get)
                         if get then
                             Teleport(v.exitMetro)
                         else
