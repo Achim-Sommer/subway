@@ -82,7 +82,6 @@ Config.Stations = {
 Config.SubwayLocations = {
 	Locations = {
 		Coords = {
-			-- Paleto Bay
 			vector3(-1012.76, -2755.96, -0.1), 
 			vector3(-908.96, -2351.32, -4.52), 
 			vector3(-541.8, -1281.44, 25.92), 
