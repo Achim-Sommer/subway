@@ -1,4 +1,5 @@
-ESX, currentStation, opened = nil, nil, false
+if Config.Framework == "ESX" then
+    ESX, currentStation, opened = nil, nil, false
 
     Citizen.CreateThread(function()
         while ESX == nil do
@@ -8,9 +9,11 @@ ESX, currentStation, opened = nil, nil, false
             Citizen.Wait(1)
         end
     end)
+else
     if Config.Framework == "QBcore" then
-    local QBCore = exports['qb-core']:GetCoreObject()
-    currentStation, opened = nil, false    
+        local QBCore = exports['qb-core']:GetCoreObject()
+        currentStation, opened = nil, false
+    end 
 end
 
 Citizen.CreateThread(function()
@@ -49,6 +52,7 @@ RegisterNUICallback("action", function(data, cb)
         if data.station ~= currentStation then
             for k, v in pairs(Config.Stations) do
                 if v.stationNumber == data.station then
+                    if Config.Framework == "ESX" then
                         ESX.TriggerServerCallback("esx_subway:getMoney", function(get)
                             if get then
                                 Teleport(v.exitMetro)
@@ -56,13 +60,13 @@ RegisterNUICallback("action", function(data, cb)
                                 ESX.ShowNotification("Du hast genug Geld!")
                             end
                         end, v.price)
-                        if Config.Framework == "QBcore" then
-                        local QBCore = exports['qb-core']:GetCoreObject()
-                        QBCore.Functions.TriggerCallback("esx_subway:getMoney", function(get)
+                    elseif Config.Framework == "QBcore" then
+                            local QBCore = exports['qb-core']:GetCoreObject()
+                            QBCore.Functions.TriggerCallback("esx_subway:getMoney", function(get)
                             if get then    
                                 Teleport(v.exitMetro)    
                             else    
-                                 QBCore.Functions.Notify("Du hast genug Geld!")    
+                                QBCore.Functions.Notify("Du hast genug Geld!")    
                             end    
                         end, v.price)    
                     end             
