@@ -1,13 +1,17 @@
 ESX, currentStation, opened = nil, nil, false
 
-Citizen.CreateThread(function()
-    while ESX == nil do
-        TriggerEvent('esx:getSharedObject', function(obj)
-            ESX = obj
-        end)
-        Citizen.Wait(0)
-    end
-end) 
+    Citizen.CreateThread(function()
+        while ESX == nil do
+            TriggerEvent('esx:getSharedObject', function(obj)
+                ESX = obj
+            end)
+            Citizen.Wait(1)
+        end
+    end)
+    if Config.Framework == "QBcore" then
+    local QBCore = exports['qb-core']:GetCoreObject()
+    currentStation, opened = nil, false    
+end
 
 Citizen.CreateThread(function()
     while true do
@@ -45,13 +49,23 @@ RegisterNUICallback("action", function(data, cb)
         if data.station ~= currentStation then
             for k, v in pairs(Config.Stations) do
                 if v.stationNumber == data.station then
-                    ESX.TriggerServerCallback("esx_subway:getMoney", function(get)
-                        if get then
-                            Teleport(v.exitMetro)
-                        else
-                            ESX.ShowNotification("Du hast nicht genug Geld!")
-                        end
-                    end, v.price)
+                        ESX.TriggerServerCallback("esx_subway:getMoney", function(get)
+                            if get then
+                                Teleport(v.exitMetro)
+                            else
+                                ESX.ShowNotification("Du hast genug Geld!")
+                            end
+                        end, v.price)
+                        if Config.Framework == "QBcore" then
+                        local QBCore = exports['qb-core']:GetCoreObject()
+                        QBCore.Functions.TriggerCallback("esx_subway:getMoney", function(get)
+                            if get then    
+                                Teleport(v.exitMetro)    
+                            else    
+                                 QBCore.Functions.Notify("Du hast genug Geld!")    
+                            end    
+                        end, v.price)    
+                    end             
                 end
                 CloseStationsMenu()
             end
