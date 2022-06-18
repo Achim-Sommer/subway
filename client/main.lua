@@ -18,7 +18,6 @@ end
 
 Citizen.CreateThread(function()
     while true do
-        Citizen.Wait(0)
         local currentStation = nil
         local playerCoords = GetEntityCoords(PlayerPedId())
         for k, v in pairs(Config.Stations) do
