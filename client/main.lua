@@ -115,13 +115,13 @@ Citizen.CreateThread(function()
 	for k,v in pairs(Config.SubwayLocations) do
 		for i = 1, #v.Coords, 1 do
 			local blip = AddBlipForCoord(v.Coords[i])
-			SetBlipSprite (blip, Config.subwayBlip.Sprite)
-			SetBlipDisplay(blip, Config.subwayBlip.Display)
-			SetBlipScale  (blip, Config.subwayBlip.Scale)
-			SetBlipColour (blip, Config.subwayBlip.Color)
+			SetBlipSprite (blip, Config.SubwayBlip.Sprite)
+			SetBlipDisplay(blip, Config.SubwayBlip.Display)
+			SetBlipScale  (blip, Config.SubwayBlip.Scale)
+			SetBlipColour (blip, Config.SubwayBlip.Color)
 			SetBlipAsShortRange(blip, true)
             BeginTextCommandSetBlipName("STRING")
-            AddTextComponentString(Config.subwayBlip.Title)
+            AddTextComponentString(Config.SubwayBlip.Title)
             EndTextCommandSetBlipName(blip)
 		end
 	end

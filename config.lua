@@ -4,7 +4,7 @@ Config.MarkerSize = vector3(0.95, 0.95, 0.45)
 Config.MarkerColor = {209, 142, 17}
 Config.SubwayTimer = 10
 
-Config.subwayBlip = {Sprite = 513, Color = 39, Display = 2, Scale = 1.0, Title = "U-Bahn"}
+Config.SubwayBlip = {Sprite = 513, Color = 39, Display = 2, Scale = 1.0, Title = "U-Bahn"}
 Config.SubwayLocations = {
 	Locations = {
 		Coords = {
