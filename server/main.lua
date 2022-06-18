@@ -6,7 +6,6 @@ if Config.Framework == 'QBcore' then
         local xPlayer = QBCore.Functions.GetPlayer(source)
         local price = math.abs(price) -- simple protection against cheaters
         if xPlayer.PlayerData.money.cash >= price then
-        -- if Player.getMoney() >= price then
             xPlayer.Functions.RemoveMoney('cash', price)
             cb(true)
         else
