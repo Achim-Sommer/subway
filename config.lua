@@ -1,10 +1,26 @@
 Config = {}
 
 Config.MarkerSize = vector3(0.95, 0.95, 0.45)
-Config.RGB = {209, 142, 17}
+Config.MarkerColor = {209, 142, 17}
 Config.SubwayTimer = 10
 
 Config.subwayBlip = {Sprite = 513, Color = 39, Display = 2, Scale = 1.0, Title = "U-Bahn"}
+Config.SubwayLocations = {
+	Locations = {
+		Coords = {
+			vector3(-1012.76, -2755.96, -0.1), 
+			vector3(-908.96, -2351.32, -4.52), 
+			vector3(-541.8, -1281.44, 25.92), 
+			vector3(278.92, -1205.48, 37.88), 
+			vector3(-280.52, -304.4, 17.28), 
+			vector3(-849.28, -134.52, 27.2), 
+			vector3(-1342.4, -506.88, 22.28), 
+			vector3(-465.08, -702.44, 19.04), 
+			vector3(-215.2, -1034.12, 29.16), 
+			vector3(113.28, -1725.72, 29.12), 
+		}
+	}
+}
 
 Config.Framework = "ESX" -- ESX / OBcore
 
@@ -79,21 +95,4 @@ Config.Stations = {
 		ticketBuy = vector3(113.28, -1725.72, 29.12),
 		exitMetro = vector3(109.6, -1722.4, 30.12),
 	},
-}
-
-Config.SubwayLocations = {
-	Locations = {
-		Coords = {
-			vector3(-1012.76, -2755.96, -0.1), 
-			vector3(-908.96, -2351.32, -4.52), 
-			vector3(-541.8, -1281.44, 25.92), 
-			vector3(278.92, -1205.48, 37.88), 
-			vector3(-280.52, -304.4, 17.28), 
-			vector3(-849.28, -134.52, 27.2), 
-			vector3(-1342.4, -506.88, 22.28), 
-			vector3(-465.08, -702.44, 19.04), 
-			vector3(-215.2, -1034.12, 29.16), 
-			vector3(113.28, -1725.72, 29.12), 
-		}
-	}
 }

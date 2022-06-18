@@ -24,7 +24,7 @@ Citizen.CreateThread(function()
                 local distance = #(playerCoords - v.ticketBuy)
 
                  if distance < 12.0 and not IsPedInAnyVehicle(PlayerPedId(), false)then
-	                DrawMarker(1, v.ticketBuy, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.MarkerSize, Config.RGB[1], Config.RGB[2], Config.RGB[3], 100, false, true, 2, false, false, false, false)
+	                DrawMarker(1, v.ticketBuy, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.MarkerSize, Config.MarkerColor[1], Config.MarkerColor[2], Config.MarkerColor[3], 100, false, true, 2, false, false, false, false)
                     currentStation = v.stationNumber
                 end
             if distance < 1.5 and not opened then
