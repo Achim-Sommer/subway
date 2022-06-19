@@ -24,12 +24,12 @@ Citizen.CreateThread(function()
                 local distance = #(playerCoords - v.ticketBuy)
 
                  if distance < 12.0 and not IsPedInAnyVehicle(PlayerPedId(), false)then
-	                DrawMarker(1, v.ticketBuy, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.MarkerSize, Config.MarkerColor[1], Config.MarkerColor[2], Config.MarkerColor[3], 100, false, true, 2, false, false, false, false)
+	                DrawMarker(Config.MarkerType, v.ticketBuy, 0.0, 0.0, 0.0, 0, 0.0, 0.0, Config.MarkerSize, Config.MarkerColor[1], Config.MarkerColor[2], Config.MarkerColor[3], 100, false, true, 2, false, false, false, false)
                     currentStation = v.stationNumber
                 end
             if distance < 1.5 and not opened then
                 SetTextComponentFormat('STRING')
-			    AddTextComponentString("Drücke ~INPUT_CONTEXT~ um ein ~y~U-Bahn Ticket~s~ zu kaufen")
+			    AddTextComponentString("Drücke ~INPUT_CONTEXT~ um ein ~g~U-Bahn Ticket~s~ zu kaufen")
 			    DisplayHelpTextFromStringLabel(0, 0, 1, -1)
                 if IsControlJustPressed(0, 38) then
                     OpenStationsMenu(currentStation)
