@@ -1,5 +1,6 @@
 Config = {}
 
+Config.Framework = "ESX" -- ESX / OBcore
 Config.MarkerSize = vector3(1, 1, 1)
 Config.MarkerColor = {51, 255, 51}
 Config.MarkerType = 27
@@ -22,8 +23,6 @@ Config.SubwayLocations = {
 		}
 	}
 }
-
-Config.Framework = "ESX" -- ESX / OBcore
 
 Config.Stations = {
 	{
