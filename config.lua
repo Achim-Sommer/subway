@@ -1,11 +1,17 @@
 Config = {}
 
+--Settings--
 Config.Framework = "ESX" -- ESX / OBcore
+Config.SubwayTimer = 10
+--Settings--
+
+--Marker Settings--
 Config.MarkerSize = vector3(1, 1, 1)
 Config.MarkerColor = {51, 255, 51}
 Config.MarkerType = 27
-Config.SubwayTimer = 10
+--Marker Settings--
 
+--Blip Settings--
 Config.SubwayBlip = {Sprite = 513, Color = 39, Display = 2, Scale = 1.0, Title = "U-Bahn"}
 Config.SubwayLocations = {
 	Locations = {
@@ -23,6 +29,7 @@ Config.SubwayLocations = {
 		}
 	}
 }
+--Blip Settings--
 
 Config.Stations = {
 	{
