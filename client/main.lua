@@ -110,7 +110,7 @@ Teleport = function(spawnCoords)
     return
 end
 
----Create Blips
+--Create Blips
 Citizen.CreateThread(function()
 	for k,v in pairs(Config.SubwayLocations) do
 		for i = 1, #v.Coords, 1 do
