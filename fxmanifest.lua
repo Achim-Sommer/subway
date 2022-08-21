@@ -1,6 +1,10 @@
 fx_version 'adamant'
 game 'gta5'
-lua54 'yes'
+
+name "Subway"
+description "Subway Script"
+author "Achim#7834"
+version "1.1.0"
 
 ui_page 'ui/ui.html'
 
