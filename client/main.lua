@@ -52,7 +52,7 @@ RegisterNUICallback("action", function(data, cb)
             for k, v in pairs(Config.Stations) do
                 if v.stationNumber == data.station then
                     if Config.Framework == "ESX" then
-                        ESX.TriggerServerCallback("esx_subway:getMoney", function(get)
+                        ESX.TriggerServerCallback("subway:getMoney", function(get)
                             if get then
                                 Teleport(v.exitMetro)
                             else
@@ -61,7 +61,7 @@ RegisterNUICallback("action", function(data, cb)
                         end, v.price)
                     elseif Config.Framework == "QBcore" then
                             local QBCore = exports['qb-core']:GetCoreObject()
-                            QBCore.Functions.TriggerCallback("esx_subway:getMoney", function(get)
+                            QBCore.Functions.TriggerCallback("subway:getMoney", function(get)
                             if get then    
                                 Teleport(v.exitMetro)    
                             else    

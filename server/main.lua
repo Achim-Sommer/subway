@@ -2,7 +2,7 @@ if Config.Framework == 'QBcore' then
     QBCore = exports['qb-core']:GetCoreObject()
 
     local QBCore = exports['qb-core']:GetCoreObject()
-    QBCore.Functions.CreateCallback('esx_subway:getMoney', function(source, cb, price)
+    QBCore.Functions.CreateCallback('subway:getMoney', function(source, cb, price)
         local xPlayer = QBCore.Functions.GetPlayer(source)
         local price = math.abs(price)
         if xPlayer.PlayerData.money.cash >= price then
@@ -20,7 +20,7 @@ else
             ESX = obj
         end)
     
-        ESX.RegisterServerCallback('esx_subway:getMoney', function(source, cb, price)
+        ESX.RegisterServerCallback('subway:getMoney', function(source, cb, price)
             local xPlayer = ESX.GetPlayerFromId(source)
             local price = math.abs(price) 
             if xPlayer.getMoney() >= price then
