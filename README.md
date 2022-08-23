@@ -13,7 +13,7 @@ Blip einstellbar
 
 Anforderungen:
 ESX / QBCore 
-
+---------------------------------------------------------------------------------------------------------------------------------------------------
 ## English
 A simple script to allow your players to use the subway. Players go to the ticket machine, buy a ticket, and then are taken to the selected station with a transition.
 
