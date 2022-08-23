@@ -27,11 +27,10 @@ Blip adjustable
 Requirements:
 ESX / QBCore 
 ---------------------------------------------------------------------------------------------------------------------------------------------------
-[Socialmedia]
+## Socialmedia
 Instagram: https://www.instagram.com/achim.sommer/
 YouTube: https://www.youtube.com/channel/UCJRVHx9owERZiRu5hcI_JLA 
 Discord: https://discord.gg/mZWNwyvmP2 
 Tebex: https://achim.tebex.io/category/2106658 
 Github: https://github.com/Achim-Sommer 
-
 ---------------------------------------------------------------------------------------------------------------------------------------------------
