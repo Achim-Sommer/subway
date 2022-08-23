@@ -3,7 +3,6 @@ game 'gta5'
 
 name "Subway"
 description "Subway Script"
-author "Achim#7834"
 version "1.1.5"
 
 ui_page 'ui/ui.html'
