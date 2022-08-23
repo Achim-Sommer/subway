@@ -1,7 +1,7 @@
 ### SUBWAY for FiveM
 ![Fivem Subway](https://user-images.githubusercontent.com/39227403/174530778-9c1648c5-2733-4de5-ac07-3c2ee1158d0f.jpg)
 
-###German
+## German
 Ein einfaches Script damit eure Spieler die U-Bahn nutzen können. Die Spieler gehen zum Ticketautomaten, kaufen ein Ticket und werden dann mit einem Übergang zu der ausgewählten Station gebracht.
 
 Funktionen:
@@ -14,7 +14,7 @@ Blip einstellbar
 Anforderungen:
 ESX / QBCore 
 
-##English
+## English
 A simple script to allow your players to use the subway. Players go to the ticket machine, buy a ticket, and then are taken to the selected station with a transition.
 
 Features:
