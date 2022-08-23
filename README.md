@@ -1,5 +1,4 @@
 ### SUBWAY for FiveM
-![Fivem Subway](https://user-images.githubusercontent.com/39227403/174530778-9c1648c5-2733-4de5-ac07-3c2ee1158d0f.jpg)
 Inspired: (https://forum.cfx.re/t/paid-standalone-esx-train-ticket-system-teleportation-location-configuration-ui/4851560)
 Design edit + Blip Settings + Framework added: https://forum.cfx.re/t/free-esx-standalone-vms-subway/4865079
 ## German
